@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body style="background-color: rgb(0,0,0);">
+    <div class="container-fluid" style="padding: 0px 0px;">
+        <div class="row no-gutters flex-row-reverse">
+            <div class="col align-self-start" id='content' style="background-color:black;">
+
+                <!-- fake window -->
+                <section id="mainContainer" style="background-color: rgb(226,226,226);  margin-left: 3vw; margin-top: 3vw; margin-bottom: 3vw; margin-right: 3vw;">
+                    <!-- inside window -->
+                    <div id="insideThing" class="row" style=" padding-right: 1%; width: 75vw">
+                        <div class="col">
+
+                            <!-- fake navbar -->
+                            <div class="row" style="margin-left: 0px; margin-right: 0px; padding-right: 15px;">
+                                <div class="col">
+                                    <nav class="navbar navbar-light navbar-expand-md float-right" style="padding-top: 1%; padding-right: 0px; padding-bottom: 1%; padding-left: 0px;">
+                                        <div class=""><img src="assets/img/COLLAPSE_FORJAMES.png"></div>
+                                    </nav>
+                                </div>
+                            </div>
+                            
+                            <div class="row justify-content-center">
+                                <div class="col-11" style="height: 85vh; margin-left: 3%; margin-right: 3%;"><div>
+                                    <iframe 
+                                        src="https://www.behance.net/gallery/83910179/Earth-Shoes-Nature-is-Magic?iframe=1" 
+                                        id="iFrame1" 
+                                        style="border: 0; top: 0; left: 0; height: 84vh; width: 100%" 
+                                        scrolling="yes" 
+                                        allowfullscreen="">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="sidebar" class="col-3 position-fixed" style=" height: 100vh; background-color: black; padding-left: 0;max-width: auto;"
+            >
+
+            <div class="sticker-container row stickers">
+                    <div class="col-sm-3">
+                        <div id="sticker1" class="sticker">
+                          <div id="sticker1header">sticker 1</div>
+                        </div>
+                    </div>
+                
+                    <div class="col-sm-3">
+                        <div id="sticker2" class="sticker">
+                          <div id="sticker2header">sticker 2</div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div id="sticker3" class="sticker">
+                          <div id="sticker3header">sticker 3</div>
+                        </div>
+                    </div>
+
+                </div>
+            <img 
+                class="img-fluid d-lg-flex flex-column flex-fill justify-content-lg-end" 
+                src="assets/img/sidebar.png" 
+                id="imgClickAndChange" 
+                style="width: none;height: 100%; float: right;" 
+                onClick="changeImage()"
+            />
+
+            <script language="javascript">
+                function changeImage() {
+                    console.log("image change called");
+                    
+                    let img = document.getElementById("imgClickAndChange");
+                    let insideThing = document.getElementById("insideThing");
+
+                    let main= document.getElementById("sidebar");
+                    console.log(main.style.width);
+                    
+                    if (img.src.substring(img.src.lastIndexOf('/')+1) == "sidebar.png") 
+                    {
+                        console.log("yes");
+                        main.classList.remove('col-3');
+                        main.classList.add('col-1');
+                        insideThing.style.width = "90vw";
+                        document.getElementById("imgClickAndChange").src = "assets/img//sidebar%20collapsed.png";
+                    }
+                    else 
+                    {
+                        // main.style.width = '70vw';
+                        main.classList.remove('col-1');
+                        main.classList.add('col-3');
+                        insideThing.style.width = "75vw";
+                        document.getElementById("imgClickAndChange").src = "assets/img//sidebar.png";
+                    }
+                }
+            </script>
+
+        </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

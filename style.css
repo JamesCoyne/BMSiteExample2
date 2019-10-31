@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'latoblack';
+    src: url('fonts/Lato/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.stickers {
+	font-size: 14px;
+	color: white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+
+	width: 33vh;
+	height: 16vh;
+
+	top:57vh;
+	left: 5vh;
+}
+
+.sticker-header {
+	font-weight: 20px;
+	color: white;
+
+}
+
+
+#sticker1 {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#sticker1header {
+  font-size: 10px;
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+  white-space: nowrap;
+}
+
+#sticker2 {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#sticker2header {
+  font-size: 10px;
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+  white-space: nowrap;
+}
+
+#sticker3 {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#sticker3header {
+  font-size: 10px;
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+  white-space: nowrap;
+}
+
+
